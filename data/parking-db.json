@@ -1,0 +1,375 @@
+{
+  "facility": {
+    "name": "Pallavi Smart Parking Hub",
+    "location": "Main Academic Block",
+    "currency": "INR",
+    "reservationTimeoutMinutes": 15
+  },
+  "slots": [
+    {
+      "id": "A01",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 3,
+      "status": "reserved",
+      "currentVehicle": "TS09AB1234",
+      "reservedAt": "2026-06-07T16:33:55.741Z"
+    },
+    {
+      "id": "A02",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 4,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "A03",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 5,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "A04",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 6,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "A05",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 7,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "A06",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 8,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "A07",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 9,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "A08",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 10,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "B01",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "suv",
+      "distanceIndex": 7,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "B02",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "suv",
+      "distanceIndex": 8,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "B03",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "suv",
+      "distanceIndex": 9,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "B04",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "suv",
+      "distanceIndex": 10,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "B05",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "suv",
+      "distanceIndex": 11,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "B06",
+      "zone": "General",
+      "floor": 1,
+      "vehicleType": "suv",
+      "distanceIndex": 12,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "C01",
+      "zone": "VIP",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 2,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "C02",
+      "zone": "VIP",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 3,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "C03",
+      "zone": "VIP",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 4,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "C04",
+      "zone": "VIP",
+      "floor": 1,
+      "vehicleType": "sedan",
+      "distanceIndex": 5,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "D01",
+      "zone": "General",
+      "floor": 2,
+      "vehicleType": "motorcycle",
+      "distanceIndex": 4,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "D02",
+      "zone": "General",
+      "floor": 2,
+      "vehicleType": "motorcycle",
+      "distanceIndex": 5,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "D03",
+      "zone": "General",
+      "floor": 2,
+      "vehicleType": "motorcycle",
+      "distanceIndex": 6,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "D04",
+      "zone": "General",
+      "floor": 2,
+      "vehicleType": "motorcycle",
+      "distanceIndex": 7,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "D05",
+      "zone": "General",
+      "floor": 2,
+      "vehicleType": "motorcycle",
+      "distanceIndex": 8,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "D06",
+      "zone": "General",
+      "floor": 2,
+      "vehicleType": "motorcycle",
+      "distanceIndex": 9,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "E01",
+      "zone": "General",
+      "floor": 2,
+      "vehicleType": "truck",
+      "distanceIndex": 13,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "E02",
+      "zone": "General",
+      "floor": 2,
+      "vehicleType": "truck",
+      "distanceIndex": 14,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "E03",
+      "zone": "General",
+      "floor": 2,
+      "vehicleType": "truck",
+      "distanceIndex": 15,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    },
+    {
+      "id": "E04",
+      "zone": "General",
+      "floor": 2,
+      "vehicleType": "truck",
+      "distanceIndex": 16,
+      "status": "available",
+      "currentVehicle": null,
+      "reservedAt": null
+    }
+  ],
+  "bookings": [
+    {
+      "id": "BKG-1780850062742-635",
+      "driverName": "A. Kumaraswamy",
+      "vehicleNumber": "TS09AB123400",
+      "vehicleType": "suv",
+      "priority": "standard",
+      "slotId": "B01",
+      "zone": "General",
+      "floor": 1,
+      "status": "cancelled",
+      "reservedAt": "2026-06-07T16:34:22.742Z",
+      "checkedInAt": null,
+      "checkedOutAt": "2026-06-07T16:34:26.420Z",
+      "fee": 0
+    },
+    {
+      "id": "BKG-1780850048421-345",
+      "driverName": "A. Kumaraswamy",
+      "vehicleNumber": "TS09AB12340",
+      "vehicleType": "truck",
+      "priority": "vip",
+      "slotId": "E01",
+      "zone": "General",
+      "floor": 2,
+      "status": "completed",
+      "reservedAt": "2026-06-07T16:34:08.421Z",
+      "checkedInAt": "2026-06-07T16:34:27.477Z",
+      "checkedOutAt": "2026-06-07T16:34:28.707Z",
+      "fee": 55
+    },
+    {
+      "id": "BKG-1780850035741-770",
+      "driverName": "A. Kumaraswamy",
+      "vehicleNumber": "TS09AB1234",
+      "vehicleType": "sedan",
+      "priority": "standard",
+      "slotId": "A01",
+      "zone": "General",
+      "floor": 1,
+      "status": "reserved",
+      "reservedAt": "2026-06-07T16:33:55.741Z",
+      "checkedInAt": null,
+      "checkedOutAt": null,
+      "fee": 0
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "LOG-1780850068707-806",
+      "type": "check-out",
+      "message": "TS09AB12340 checked out from E01",
+      "at": "2026-06-07T16:34:28.707Z"
+    },
+    {
+      "id": "LOG-1780850067477-295",
+      "type": "check-in",
+      "message": "TS09AB12340 checked in at E01",
+      "at": "2026-06-07T16:34:27.477Z"
+    },
+    {
+      "id": "LOG-1780850066420-710",
+      "type": "cancel",
+      "message": "TS09AB123400 booking cancelled for B01",
+      "at": "2026-06-07T16:34:26.420Z"
+    },
+    {
+      "id": "LOG-1780850062742",
+      "type": "reserve",
+      "message": "TS09AB123400 reserved B01",
+      "at": "2026-06-07T16:34:22.742Z"
+    },
+    {
+      "id": "LOG-1780850048421",
+      "type": "reserve",
+      "message": "TS09AB12340 reserved E01",
+      "at": "2026-06-07T16:34:08.421Z"
+    },
+    {
+      "id": "LOG-1780850035741",
+      "type": "reserve",
+      "message": "TS09AB1234 reserved A01",
+      "at": "2026-06-07T16:33:55.741Z"
+    }
+  ]
+}

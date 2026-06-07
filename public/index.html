@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Vehicle Parking System</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Real-time allocation MVP</p>
+          <h1>Smart Vehicle Parking System</h1>
+        </div>
+        <div class="connection" id="connectionStatus">
+          <span class="pulse"></span>
+          Live
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="operations-band" aria-label="Live parking overview">
+          <div class="metric">
+            <span class="metric-label">Available</span>
+            <strong id="availableCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Occupied</span>
+            <strong id="occupiedCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Reserved</span>
+            <strong id="reservedCount">0</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Occupancy</span>
+            <strong id="occupancyRate">0%</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Revenue</span>
+            <strong id="revenueTotal">Rs 0</strong>
+          </div>
+        </section>
+
+        <section class="main-grid">
+          <div class="map-panel">
+            <div class="panel-header">
+              <div>
+                <h2>Parking Map</h2>
+                <p id="facilityName">Loading facility...</p>
+              </div>
+              <div class="legend" aria-label="Slot status legend">
+                <span><i class="status-dot available"></i>Available</span>
+                <span><i class="status-dot reserved"></i>Reserved</span>
+                <span><i class="status-dot occupied"></i>Occupied</span>
+                <span><i class="status-dot maintenance"></i>Maintenance</span>
+              </div>
+            </div>
+            <div class="map-frame">
+              <div class="campus-map" aria-label="Directed college parking layout">
+                <div class="campus-route" aria-label="Campus vehicle route">
+                  <div class="campus-road road-entry">Entry Gate</div>
+                  <div class="campus-road road-main">One Way Campus Drive</div>
+                  <div class="campus-road road-exit">Exit Gate</div>
+                </div>
+
+                <div class="campus-core" aria-label="College landmarks">
+                  <div class="map-landmark landmark-security">
+                    <span>Security Check</span>
+                    <strong>Gate Pass</strong>
+                  </div>
+                  <div class="map-landmark landmark-admin">
+                    <span>Admin Block</span>
+                    <strong>VIP Access</strong>
+                  </div>
+                  <div class="map-landmark landmark-academic">
+                    <span>Academic Block</span>
+                    <strong>Main Classes</strong>
+                  </div>
+                  <div class="map-landmark landmark-library">
+                    <span>Library</span>
+                    <strong>Student Zone</strong>
+                  </div>
+                  <div class="map-landmark landmark-canteen">
+                    <span>Canteen</span>
+                    <strong>Food Court</strong>
+                  </div>
+                </div>
+
+                <div class="direction-strip" aria-label="Driver directions">
+                  <div class="direction-label direction-a">General cars: Gate -> Academic Block</div>
+                  <div class="direction-label direction-b">SUVs: Gate -> Main Drive -> Food Court side</div>
+                  <div class="direction-label direction-c">VIP: Gate -> Admin Block</div>
+                  <div class="direction-label direction-d">Two-wheelers: Library side entry</div>
+                </div>
+
+                <div class="slot-sections" id="slotGrid"></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="control-panel">
+            <div class="section-title">
+              <h2>Driver Booking</h2>
+              <span>DSAA</span>
+            </div>
+            <form id="bookingForm" class="booking-form">
+              <label>
+                Driver name
+                <input id="driverName" name="driverName" value="A. Kumaraswamy" required>
+              </label>
+              <label>
+                Vehicle number
+                <input id="vehicleNumber" name="vehicleNumber" value="TS09AB1234" required>
+              </label>
+              <div class="form-row">
+                <label>
+                  Vehicle type
+                  <select id="vehicleType" name="vehicleType">
+                    <option value="motorcycle">Motorcycle</option>
+                    <option value="sedan" selected>Sedan</option>
+                    <option value="suv">SUV</option>
+                    <option value="truck">Truck</option>
+                  </select>
+                </label>
+                <label>
+                  Priority
+                  <select id="priority" name="priority">
+                    <option value="standard" selected>Standard</option>
+                    <option value="vip">VIP</option>
+                  </select>
+                </label>
+              </div>
+              <button class="primary-action" type="submit">Allocate Best Slot</button>
+            </form>
+
+            <div class="allocation-result" id="allocationResult">
+              <span class="empty-state">No active booking selected.</span>
+            </div>
+          </aside>
+        </section>
+
+        <section class="detail-grid">
+          <div class="table-panel">
+            <div class="panel-header compact">
+              <h2>Active Sessions</h2>
+              <button class="secondary-action" id="resetDemo" type="button">Reset Demo</button>
+            </div>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Booking</th>
+                    <th>Vehicle</th>
+                    <th>Slot</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="bookingTable"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="admin-panel">
+            <div class="section-title">
+              <h2>Admin Controls</h2>
+              <span>Operator</span>
+            </div>
+            <form id="adminForm" class="booking-form">
+              <label>
+                Slot
+                <select id="adminSlot"></select>
+              </label>
+              <div class="segmented" role="group" aria-label="Admin slot status">
+                <button type="button" data-status="available" class="segment active">Available</button>
+                <button type="button" data-status="maintenance" class="segment">Maintenance</button>
+              </div>
+              <button class="secondary-action full" type="submit">Apply Override</button>
+            </form>
+            <div class="audit-log" id="auditLog"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
