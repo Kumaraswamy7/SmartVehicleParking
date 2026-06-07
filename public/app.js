@@ -69,7 +69,7 @@ async function loadState() {
 }
 
 function connectEvents() {
-  const source = new EventSource('/events');
+  const source = new EventSource('/api/events');
   source.addEventListener('open', () => setConnection(true));
   source.addEventListener('error', () => setConnection(false));
   source.addEventListener('state', (event) => {

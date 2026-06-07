@@ -1,5 +1,5 @@
 // POST /api/bookings/[id]/[action] - Handle booking actions (check-in, check-out, cancel)
-const { getService } = require('./utils');
+const { getService } = require('../../utils');
 
 module.exports = (request, response) => {
   try {
