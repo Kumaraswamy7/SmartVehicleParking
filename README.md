@@ -29,6 +29,17 @@ http://localhost:3000
 npm test
 ```
 
+## Free Live Deployment (Vercel)
+
+1. Push this repository to GitHub.
+2. Create a free account at Vercel and click **Add New -> Project**.
+3. Import this repository and deploy with default settings.
+4. Open the generated Vercel URL to use the app live on the web.
+
+Notes:
+- API routes are served from `/api/*` via `vercel.json`.
+- Real-time updates use `/api/events` (SSE) and may reconnect periodically on free tier limits.
+
 ## Demo Credentials
 
 The MVP uses a demo-first flow, so no password is required. Enter any driver name and vehicle number in the dashboard.
@@ -54,4 +65,3 @@ The code is structured so the JSON store can be replaced by MySQL without changi
 - `src/store.js`: replace JSON persistence with MySQL queries and transactions.
 - `src/parkingService.js`: keep business rules and allocation logic.
 - `src/server.js`: keep API contracts for web and mobile clients.
-
